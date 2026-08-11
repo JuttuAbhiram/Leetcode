@@ -5,8 +5,5 @@ class Solution:
         for num in arr:
             freq[num]=freq.get(num,0)+1
 
-        res=set()
-        for num in freq:
-            res.add(freq[num])
-        return len(freq)==len(res)
-
+        res=list(freq.values())
+        return len(freq)==len(set(res))
