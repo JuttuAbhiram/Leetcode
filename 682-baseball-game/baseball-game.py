@@ -9,6 +9,6 @@ class Solution:
                 res.remove(res[-1])
             elif op=='D':
                 res.append(res[-1]*2)
-            elif op=='+':
+            else:
                 res.append(res[-1]+res[-2])
         return sum(res)
