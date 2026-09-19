@@ -1,10 +1,10 @@
 class Solution:
     def findDuplicates(self, nums: List[int]) -> List[int]:
-        res=[]
+        freq={}
         for num in nums:
-            index=abs(num)-1
-            if nums[index]<0:
-                res.append(abs(num))
-            else:
-                nums[index]*=-1
+            freq[num]=freq.get(num,0)+1
+        res=[]
+        for num in freq:
+            if freq[num]==2:
+                res.append(num)
         return res
