@@ -4,5 +4,5 @@ class Solution:
         k=k%l
         nums.reverse()
         nums[:k]=reversed(nums[:k])
-        nums[k:l]=reversed(nums[k:l])
+        nums[k:]=reversed(nums[k:])
 
